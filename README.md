@@ -45,3 +45,25 @@ public static String decryptMsg(byte[] cipherText, SecretKey secret)
     return decryptString; 
 }
 ```
+
+# How SHA1 Works?
+https://deadhacker.com/2006/02/21/sha-1-illustrated/
+<br>
+I googled “SHA1 illustrated” and found this article: SHA-1 Illustrated.
+
+Abstract from the referenced article:
+
+The following simplifies the specification of SHA-1 in an easy to digest form. First we will cover the general structure of the algorithm. Detail of the expansion and compression routines are covered separately.
+
+
+First we start with a message. The message is padded and the length of the message is added to the end. It is then split into blocks of 512 bits (Figure 2).
+
+
+(Figure 2)
+
+The blocks are then processed one at a time. Each block must be expanded and compressed. The value after each compression is added to a 160bit buffer called the current hash state. After the last block is processed the current hash state is returned as the final hash. A overview of this procedure can be seen in Figure 3.
+
+
+Go to the article to read more
+
+
